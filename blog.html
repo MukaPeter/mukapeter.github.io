@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<meta charset='UTF-8'>
+<link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div>
+<label>Title</label>
+<input type="text" class="text-field" id="title_input">
+<label>Content</label>
+<input type="text" class="text-field" id="title_input">
+<button>Upload Post</button>
+</div>
+
+<table>
+        <tr>
+          <th>Racer Name</th>
+          <th>Round Time</th> 
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>10</td>
+        </tr>
+      </table>
+
+<div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+
+ <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA2CYlpDYgr_6tc7ptA647PiDH2tr11pwM",
+    authDomain: "racer-aaad2.firebaseapp.com",
+    databaseURL: "https://racer-aaad2.firebaseio.com",
+    projectId: "racer-aaad2",
+    storageBucket: "racer-aaad2.appspot.com",
+    messagingSenderId: "542717970654"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="race.js"></script>
+
+</body>
+
+</html>
