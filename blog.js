@@ -17,6 +17,10 @@ $('#button_upload').click((event) => {
 
     fb.ref(path).push(dataToSave);
 
+    function Refresh() {
+        window.parent.location = window.parent.location.href;
+    }
+
 })
 
 
@@ -30,3 +34,7 @@ fb.ref("posts").once('value').then(data => {
     })
 
 });
+
+function Refresh() {
+    window.parent.location = window.parent.location.href;
+}
