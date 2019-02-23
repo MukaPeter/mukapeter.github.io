@@ -1,7 +1,7 @@
 $('#button_upload').click((event) => {
     var title_input = $('#title_input').val();
-    var content_input= $('#content_input').val();
-    console.log (title_input, content_input);
+    var content_input = $('#content_input').val();
+    console.log(title_input, content_input);
 
     $('ul').append
         (`<li>
@@ -9,17 +9,24 @@ $('#button_upload').click((event) => {
         <p>${content_input}</p>
         </li>`);
 
-    let path = 'posts/1';
+    let path = 'posts';
     let dataToSave = {
         title: title_input,
         text: content_input
     };
 
-    fb.ref('posts').once('posts/1').then(data => {
-        let savedPosts = data.val();
-      });
-    
-    fb.ref(path).set(dataToSave);
+    fb.ref(path).push(dataToSave);
+
+})
+
+
+fb.ref("posts").once('value').then(data => {
+    data.forEach(element => {
+        $('ul').append(`
+        <li>
+          <h3>${element.child('title').val()}</h3>
+          <p>${element.child('text').val()}</p>
+        </ul>`)
+    })
 
 });
-
