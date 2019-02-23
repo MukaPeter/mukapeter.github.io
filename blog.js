@@ -26,7 +26,7 @@ fb.ref("posts").once('value').then(data => {
         <li>
           <h3>${element.child('title').val()}</h3>
           <p>${element.child('text').val()}</p>
-        </ul>`)
+        </li>`)
     })
 
 });
