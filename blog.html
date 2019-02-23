@@ -7,24 +7,30 @@
 
 <body>
 
-<div>
-<label>Title</label>
-<input type="text" class="text-field" id="title_input">
-<label>Content</label>
-<input type="text" class="text-field" id="content_input">
-<button id="button_upload">Upload New Post</button>
+  <div id="header">
+    <h1>RedBlog</h1>
+  </div>
+
+  <h2 id="title-newposts">New Post</h2>
+
+  <div>
+    <label>Title</label>
+    <input type="text" class="text-field" id="title_input">
+    <label>Content</label>
+    <input type="text" class="text-field" id="content_input">
+
+    <button id="button_upload">Upload New Post</button>
 </div>
 
-<table>
-        <tr>
-          <th>Post title</th>
-        </tr>
-        <tr>
-          <td>Lorem ipsum</td>
-        </tr>
-      </table>
+<h2 id="title-posts">Posts</h2>
 
-<div>
+<ul>
+<li>
+<h3>Post title</h3>
+<p>Content</p>
+</li>
+
+</ul>
 
 </div>
 
@@ -42,6 +48,7 @@
     messagingSenderId: "923177741755"
   };
   firebase.initializeApp(config);
+  fb = firebase.database();
 </script>
 
 <script src="blog.js"></script>
